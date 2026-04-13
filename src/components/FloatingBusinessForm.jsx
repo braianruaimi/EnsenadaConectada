@@ -17,8 +17,15 @@ export function FloatingBusinessForm({ open, onClose }) {
 
   function handleSubmit(e) {
     e.preventDefault()
+    const mensaje =
+      `Hola, quiero sumar mi negocio.\n` +
+      `Nombre y apellido: ${form.nombre}\n` +
+      `Teléfono: ${form.telefono}\n` +
+      `Email: ${form.email}\n` +
+      `Nombre del comercio: ${form.comercio}`
+    const url = `https://wa.me/5492215047962?text=${encodeURIComponent(mensaje)}`
+    window.open(url, '_blank')
     setEnviado(true)
-    // Aquí podrías enviar los datos a un backend o servicio externo
   }
 
   return (
