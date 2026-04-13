@@ -433,6 +433,7 @@ function App() {
             />
           </section>
 
+          {/*
           <section id="editor" className="pt-10">
             <ContentStudioPanel
               configData={configData}
@@ -442,6 +443,7 @@ function App() {
               setSelectedCategory={setSelectedCategory}
             />
           </section>
+          */}
         </main>
 
         <footer id="contacto" className="pt-10">
