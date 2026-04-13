@@ -1,4 +1,4 @@
-# Web: https://tu-dominio-web.com
+# Web: https://braianruaimi.github.io/EnsenadaConectada/
 
 # Ensenada Conectada
 
@@ -88,10 +88,10 @@ Repositorio:
 
 - https://github.com/braianruaimi/EnsenadaConectada
 
-## Nota importante
+## Deploy
 
-La primera línea del README quedó preparada con un enlace placeholder:
+La app quedó preparada para publicarse en GitHub Pages con esta URL:
 
-- https://tu-dominio-web.com
+- https://braianruaimi.github.io/EnsenadaConectada/
 
-Cuando tengas la URL real del sitio desplegado, conviene reemplazar esa línea para que el acceso a la web quede visible arriba de todo.
+Después de cada push a main, GitHub Actions genera y publica una nueva versión del sitio.
