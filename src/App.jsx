@@ -6,6 +6,14 @@ import { ContentStudioPanel } from './components/ContentStudioPanel'
 import { FloatingAssistant } from './components/FloatingAssistant'
 import { FloatingWhatsApp } from './components/FloatingWhatsApp'
 
+function normalizeSearchValue(value) {
+  return value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim()
+}
+
 function App() {
   const [configData, setConfigData] = useState(() => ({
     ...appConfig,
@@ -49,18 +57,39 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('')
 
   const filteredBusinesses = useMemo(() => {
-    const normalizedQuery = searchTerm.trim().toLowerCase()
+    const normalizedQuery = normalizeSearchValue(searchTerm)
 
-    return businessesData.filter((business) => {
-      const matchesCategory =
+    let filtered = businessesData.filter((business) => {
+      const normalizedName = normalizeSearchValue(business.nombre)
+      const normalizedCategory = normalizeSearchValue(business.categoria)
+      const normalizedDescription = normalizeSearchValue(business.descripcion)
+      const normalizedAddress = normalizeSearchValue(business.direccion || '')
+
+      let matchesCategory =
         selectedCategory === 'Todos' || business.categoria === selectedCategory
+      // Si la categoría seleccionada es "Comercios Destacados", filtrar por destacados
+      if (selectedCategory === 'Comercios Destacados') {
+        matchesCategory = business.destacado === true
+      }
+
       const matchesSearch =
         normalizedQuery.length === 0 ||
-        business.nombre.toLowerCase().includes(normalizedQuery) ||
-        business.categoria.toLowerCase().includes(normalizedQuery)
+        normalizedName.includes(normalizedQuery) ||
+        normalizedCategory.includes(normalizedQuery) ||
+        normalizedDescription.includes(normalizedQuery) ||
+        normalizedAddress.includes(normalizedQuery)
 
       return matchesCategory && matchesSearch
     })
+
+    // Si no hay búsqueda ni filtro, mostrar destacados primero
+    if (selectedCategory === 'Todos' && !searchTerm) {
+      filtered = [
+        ...filtered.filter((b) => b.destacado),
+        ...filtered.filter((b) => !b.destacado),
+      ]
+    }
+    return filtered
   }, [businessesData, searchTerm, selectedCategory])
 
   const whatsappHref = `https://wa.me/${configData.whatsapp.number}?text=${encodeURIComponent(configData.whatsapp.message)}`

@@ -42,6 +42,7 @@ export const appConfig = {
   },
   categories: [
     'Todos',
+    'Comercios Destacados',
     'Gastronomía',
     'Servicios',
     'Comercio',
@@ -194,6 +195,7 @@ export const negocios = [
   {
     nombre: 'Marea Café de Especialidad',
     categoria: 'Gastronomía',
+    destacado: true,
     foto: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80',
     descripcion:
       'Cafetería de autor con pastelería artesanal, brunch y una estética contemporánea ideal para reuniones o trabajo remoto.',
@@ -207,6 +209,7 @@ export const negocios = [
   {
     nombre: 'Taller Norte Soluciones',
     categoria: 'Servicios',
+    destacado: true,
     foto: 'https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=900&q=80',
     descripcion:
       'Servicio técnico integral para hogares y comercios: electricidad, mantenimiento preventivo y reparaciones express.',
