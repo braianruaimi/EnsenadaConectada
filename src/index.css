@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import 'tailwindcss';
+
+:root {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #020617;
+  background: #f8fbff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(37, 99, 235, 0.18);
+}
+
+.business-map-marker {
+  background: transparent;
+  border: 0;
+}
+
+.business-map-pin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 9999px 9999px 9999px 0;
+  background: linear-gradient(135deg, #2563eb, #0f172a);
+  color: #ffffff;
+  font-weight: 700;
+  transform: rotate(-45deg);
+  box-shadow: 0 14px 34px -14px rgba(37, 99, 235, 0.7);
+}
+
+.business-map-pin span {
+  transform: rotate(45deg);
+}
