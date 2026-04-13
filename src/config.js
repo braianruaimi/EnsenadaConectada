@@ -126,7 +126,7 @@ export const appConfig = {
     metrics: [
       { value: 'Centro', label: 'Alta intención de búsqueda' },
       { value: 'Punta Lara', label: 'Servicios y gastronomía' },
-      { value: 'Cambaceres', label: 'Comercio y atención diaria' },
+      { value: 'El Dique', label: 'Comercio y atención diaria' },
     ],
     areas: [
       {

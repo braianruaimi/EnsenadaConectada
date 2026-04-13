@@ -9,6 +9,13 @@ export function FloatingBusinessForm({ open, onClose }) {
   })
   const [enviado, setEnviado] = useState(false)
 
+  // Resetear el formulario y el estado al cerrar
+  function handleClose() {
+    setForm({ nombre: '', telefono: '', email: '', comercio: '' })
+    setEnviado(false)
+    onClose()
+  }
+
   if (!open) return null
 
   function handleChange(e) {
@@ -33,7 +40,7 @@ export function FloatingBusinessForm({ open, onClose }) {
       <div className="relative w-full max-w-md rounded-2xl bg-white p-8 shadow-xl">
         <button
           className="absolute right-4 top-4 text-slate-400 hover:text-slate-700"
-          onClick={onClose}
+          onClick={handleClose}
           aria-label="Cerrar"
         >
           ×
