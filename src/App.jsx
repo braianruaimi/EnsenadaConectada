@@ -5,6 +5,7 @@ import { BusinessMap } from './components/BusinessMap'
 import { ContentStudioPanel } from './components/ContentStudioPanel'
 import { FloatingAssistant } from './components/FloatingAssistant'
 import { FloatingWhatsApp } from './components/FloatingWhatsApp'
+import { FloatingBusinessForm } from './components/FloatingBusinessForm'
 
 function normalizeSearchValue(value) {
   return value
@@ -15,6 +16,7 @@ function normalizeSearchValue(value) {
 }
 
 function App() {
+  const [showBusinessForm, setShowBusinessForm] = useState(false)
   const [configData, setConfigData] = useState(() => ({
     ...appConfig,
     brand: { ...appConfig.brand },
@@ -123,14 +125,13 @@ function App() {
               ))}
             </nav>
 
-            <a
-              href={whatsappHref}
-              target="_blank"
-              rel="noreferrer"
+            <button
+              type="button"
+              onClick={() => setShowBusinessForm(true)}
               className="inline-flex items-center justify-center rounded-full bg-slate-950 px-5 py-3 text-sm font-medium text-white transition hover:-translate-y-0.5 hover:bg-blue-600"
             >
               {configData.navigation.cta}
-            </a>
+            </button>
           </div>
         </header>
 
@@ -163,14 +164,13 @@ function App() {
                 >
                   {configData.hero.primaryAction}
                 </a>
-                <a
-                  href={whatsappHref}
-                  target="_blank"
-                  rel="noreferrer"
+                <button
+                  type="button"
+                  onClick={() => setShowBusinessForm(true)}
                   className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white/80 px-6 py-3.5 text-sm font-semibold text-slate-900 backdrop-blur-md transition hover:-translate-y-0.5 hover:border-blue-200 hover:text-blue-700"
                 >
                   {configData.hero.secondaryAction}
-                </a>
+                </button>
               </div>
             </div>
 
@@ -342,14 +342,13 @@ function App() {
                 {configData.publisher.description}
               </p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                <a
-                  href={whatsappHref}
-                  target="_blank"
-                  rel="noreferrer"
+                <button
+                  type="button"
+                  onClick={() => setShowBusinessForm(true)}
                   className="inline-flex items-center justify-center rounded-full bg-blue-500 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-blue-400"
                 >
                   {configData.publisher.primaryAction}
-                </a>
+                </button>
                 <a
                   href="#cobertura"
                   className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10"
@@ -466,6 +465,7 @@ function App() {
 
       <FloatingAssistant assistantConfig={configData.assistant} />
       <FloatingWhatsApp whatsappConfig={configData.whatsapp} />
+      <FloatingBusinessForm open={showBusinessForm} onClose={() => setShowBusinessForm(false)} />
     </div>
   )
 }
