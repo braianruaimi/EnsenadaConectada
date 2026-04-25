@@ -15,7 +15,7 @@ const comercios = [
     ubicacion: 'Paseo Gastronómico, Sidotti 134 Local 2, Ensenada',
     whatsapp: '542215960885',
     instagram: 'https://www.instagram.com/clubdejarras/',
-    imagen: 'img/comercios/Clubdejarras.webp',
+    imagen: 'img/comercios/cdj.jpg',
     descripcion: 'Bar y despacho de cervezas artesanales.',
     horario: { dias: 'Miércoles a Domingos', apertura: '18:00', cierre: '23:30' },
   },
