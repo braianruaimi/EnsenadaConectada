@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="title desc">
+  <title>Pizza Costera</title>
+  <desc>Ilustracion decorativa de Pizza Costera</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#172554" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)" />
+  <path d="M560 92c84 0 152 60 152 136 0 16-4 32-10 48L500 234c12-82 60-142 60-142Z" fill="#fef3c7" />
+  <circle cx="602" cy="160" r="14" fill="#dc2626" />
+  <circle cx="640" cy="196" r="14" fill="#dc2626" />
+  <circle cx="574" cy="210" r="14" fill="#dc2626" />
+  <text x="64" y="100" fill="#dbeafe" font-family="Inter, Arial, sans-serif" font-size="26">Gastronomia</text>
+  <text x="64" y="232" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="80" font-weight="800">PC</text>
+  <text x="64" y="312" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="34">Pizza Costera</text>
+</svg>

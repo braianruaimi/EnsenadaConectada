@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#g)" />
+  <circle cx="680" cy="90"  r="120" fill="rgba(255,255,255,0.07)" />
+  <circle cx="120" cy="360" r="150" fill="rgba(255,255,255,0.06)" />
+  <!-- Ícono de diamante / prisma -->
+  <g transform="translate(295, 65)">
+    <polygon points="110,0 220,80 175,180 45,180 0,80" fill="rgba(255,255,255,0.13)" />
+    <polygon points="110,0 220,80 110,50"  fill="rgba(255,255,255,0.08)" />
+    <polygon points="110,0 0,80   110,50"  fill="rgba(255,255,255,0.10)" />
+    <polygon points="110,50 220,80 175,180 45,180 0,80" fill="rgba(255,255,255,0.06)" />
+  </g>
+  <text x="70" y="155" fill="#bfdbfe" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600">Otros</text>
+  <text x="70" y="255" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="88">EP</text>
+  <text x="70" y="320" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="700">Estudio Prisma</text>
+</svg>

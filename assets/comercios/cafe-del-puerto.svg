@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="title desc">
+  <title>Cafe del Puerto</title>
+  <desc>Ilustracion decorativa de Cafe del Puerto</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)" />
+  <circle cx="120" cy="92" r="74" fill="#ffffff" fill-opacity="0.12" />
+  <circle cx="680" cy="340" r="138" fill="#ffffff" fill-opacity="0.08" />
+  <text x="64" y="104" fill="#bfdbfe" font-family="Inter, Arial, sans-serif" font-size="26">Gastronomia</text>
+  <text x="64" y="235" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="80" font-weight="800">CP</text>
+  <text x="64" y="312" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="34">Cafe del Puerto</text>
+</svg>

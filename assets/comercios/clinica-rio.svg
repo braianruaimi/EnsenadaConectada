@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="title desc">
+  <title>Clinica Integral Rio</title>
+  <desc>Ilustracion decorativa de Clinica Integral Rio</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)" />
+  <circle cx="172" cy="138" r="92" fill="#ffffff" fill-opacity="0.08" />
+  <path d="M612 74h76v76h-76zM644 42v140M580 106h172" stroke="#bfdbfe" stroke-width="18" stroke-linecap="round" />
+  <text x="64" y="100" fill="#dbeafe" font-family="Inter, Arial, sans-serif" font-size="26">Salud</text>
+  <text x="64" y="232" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="80" font-weight="800">CR</text>
+  <text x="64" y="312" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="34">Clinica Integral Rio</text>
+</svg>
