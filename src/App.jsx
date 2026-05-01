@@ -269,12 +269,12 @@ function App() {
                           <p className="mt-1">{business.horarios}</p>
                         </div>
 
-                        <div className="grid gap-2 text-sm font-medium sm:grid-cols-2">
+                        <div className="grid gap-2 text-sm font-medium">
                           <a
                             href={business.instagram}
                             target="_blank"
                             rel="noreferrer"
-                            className="rounded-2xl border border-slate-200 px-4 py-3 text-center text-slate-700 transition hover:border-blue-200 hover:text-blue-700"
+                            className="rounded-2xl border border-red-500 bg-[#ed4956] px-4 py-3 text-center text-white transition hover:bg-[#c13584] hover:border-red-600"
                           >
                             {configData.businessCard.instagramLabel}
                           </a>
@@ -283,12 +283,14 @@ function App() {
                               href={business.web}
                               target="_blank"
                               rel="noreferrer"
-                              className="rounded-2xl border border-slate-200 px-4 py-3 text-center text-slate-700 transition hover:border-blue-200 hover:text-blue-700"
+                              className="rounded-2xl border border-slate-200 bg-slate-200 px-4 py-3 text-center text-slate-400 cursor-not-allowed"
+                              tabIndex={-1}
+                              aria-disabled="true"
                             >
                               {configData.businessCard.websiteLabel}
                             </a>
                           ) : (
-                            <span className="rounded-2xl border border-dashed border-slate-200 px-4 py-3 text-center text-slate-400">
+                            <span className="rounded-2xl border border-dashed border-slate-200 bg-slate-100 px-4 py-3 text-center text-slate-400 cursor-not-allowed">
                               {configData.businessCard.unavailableWebsite}
                             </span>
                           )}
